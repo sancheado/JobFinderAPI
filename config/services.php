@@ -31,4 +31,15 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'linkedin' => [
+        'client_id' => env('LINKEDIN_CLIENT_ID'),
+        'client_secret' => env('LINKEDIN_CLIENT_SECRET'),
+        'redirect' => env('LINKEDIN_REDIRECT_URI'),
+    ],
+
+    'infojobs' => [
+        'client_id' => env('INFOJOBS_CLIENT_ID'),
+        'client_secret' => env('INFOJOBS_CLIENT_SECRET'),
+        'redirect' => env('INFOJOBS_REDIRECT_URI'),
+    ],
 ];
