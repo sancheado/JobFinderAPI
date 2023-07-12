@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/auth/linkedin', 'App\Http\Controllers\AuthController@redirectToLinkedIn')->name('linkedin.login');
+Route::get('/auth/infojobs', 'App\Http\Controllers\AuthController@redirectToInfojobs')->name('infojobs.login');
+
+Route::get('/callback/linkedin', 'App\Http\Controllers\AuthController@handleLinkedInCallback');
+Route::get('/callback/infojobs', 'App\Http\Controllers\AuthController@handleInfojobsCallback');
